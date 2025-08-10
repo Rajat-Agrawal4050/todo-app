@@ -1,6 +1,10 @@
 import "./App.css";
 import { useEffect, useRef, useState } from "react";
-import ListItem from "./ListItem";
+import ListItem from "./components/ListItem";
+import { toast } from "react-toastify";
+import newtoast from "react-hot-toast";
+import Details from './components/Details';
+import Navbar from "./components/Navbar";
 
 function App() {
   const [all_list, setState] = useState(() => {
@@ -26,9 +30,9 @@ function App() {
 
     let description = document.getElementById("description").value;
     if (title.trim() === "") {
-      alert("Please Enter title");
+      toast.error("Please Enter title");
     } else if (description.trim() === "") {
-      alert("Please Enter Decription");
+      toast.error("Please Enter Decription");
     } else {
       let obj = {
         id: Date.now(),
@@ -38,14 +42,38 @@ function App() {
       };
 
       setState((prev) => [...prev, obj]);
-      console.log(all_list);
+      // console.log(all_list);
+      toast.success("Todo Added Successfully!");
     }
   }
 
+  function deleteNote(id,tid){
+    setState((prev) => prev.filter((item) => item.id !== parseInt(id)));
+    newtoast.dismiss(tid)
+    toast.success("Todo Deleted!");
+  }
   function deleteItem(event) {
     let id = event.target.getAttribute("data-id");
-    setState((prev) => prev.filter((item) => item.id !== parseInt(id)));
-    alert("Item Deleted!");
+   
+    newtoast((t) => (
+          <div className="dialog">
+            <div className="dialog-msg">
+              <p> Do You Really want to delete this Todo? </p>
+            </div>
+            <footer>
+              <div className="controls">
+                <button onClick={() => deleteNote(id,t.id)} className="button button-danger mx-2 doAction"
+                >
+                  Delete
+                </button>
+                <button onClick={() => newtoast.dismiss(t.id)} className="button button-default mx-2 cancelAction">
+                  Cancel
+                </button>
+              </div>
+            </footer>
+          </div>
+    
+    ));
   }
 
   function editItem(eid, event) {
@@ -72,6 +100,7 @@ function App() {
     });
     let btn = ref2.current;
     btn.click();
+    toast.info("Todo Edited!");
   }
 
   function markRead(id, e) {
@@ -102,9 +131,12 @@ function App() {
   }
   return (
     <>
+
+<Navbar></Navbar>
+      
       <div
         className="container top_container text-center"
-        style={{ marginTop: "4%" }}
+        style={{ marginTop: "2%" }}
       >
         <h3>To-Do List</h3>
       </div>
@@ -154,8 +186,16 @@ function App() {
                 key={`list_item${ele.id}`}
                 delfunc={deleteItem}
                 editfunc={editItem}
-                title={ele.title}
-                desc={ele.description}
+                title={
+                  ele.title.length > 20
+                    ? ele.title.slice(0, 20) + "..."
+                    : ele.title
+                }
+                desc={
+                  ele.description.length > 30
+                    ? ele.description.slice(0, 30) + "..."
+                    : ele.description
+                }
                 id={ele.id}
                 markasread={ele.markAsRead}
                 markread={markRead}
@@ -221,6 +261,7 @@ function App() {
                     value={note.description}
                     id="edesc"
                     name="description"
+                    rows="4"
                     onChange={onChange}
                   ></textarea>
                 </div>

@@ -1,16 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Route,Routes } from "react-router-dom";
-import Details from './Details';
-import About from './About';
 
 export default function Navbar() {
   return (
     <>
-    <Routes>
-        <Route extact path="/details" element={<Details />} />
-        <Route extact path="/about" element={<About />} />
-      </Routes>
+
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
   <div className="container-fluid">
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">

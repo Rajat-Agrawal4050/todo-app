@@ -38,6 +38,9 @@
 .left_div h5 {
   color: rgb(33, 37, 41);
 }
+.left_div p {
+  color: rgb(33, 37, 41);
+}
 .left_div .custom_link {
   text-decoration: none !important;
 }
@@ -96,6 +99,14 @@
     justify-content: center;
     margin-right: 8%;
   }
+  .custom_div{
+    width: 100% !important;
+    margin: 50px auto !important;
+  }
+  .para_div{
+    width: 100% !important;
+    overflow: auto;
+  }
 }
 
 .dialog {
@@ -153,4 +164,14 @@
 .link {
   padding: 5px 10px;
   cursor: pointer;
+}
+.custom_div{
+  max-width: 60%;
+  max-height: 60vh;
+  margin: 50px auto;
+  background-color: none;
+  text-overflow:unset;
+}
+.custom_div .para{
+  text-align: left;
 }

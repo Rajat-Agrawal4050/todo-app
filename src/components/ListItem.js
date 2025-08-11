@@ -7,12 +7,12 @@ export default function ListItem(props) {
     <>
       <div className="col-md-12 content_div">
         <div className="left_div">
-          <Link className="custom_link"  to={`/details/${props.id}`}>
+          <Link className="custom_link"  to={`/todo-app/details/${props.id}`}>
             <h5 className={props.markasread ? "line-through" : ""}>
               {props.title}
             </h5>
           </Link>
-          <Link className="custom_link"  to={`/details/${props.id}`}>
+          <Link className="custom_link"  to={`/todo-app/details/${props.id}`}>
           <p className={props.markasread ? "line-through" : ""}>
             {" "}
             {props.desc}

@@ -99,11 +99,11 @@
     justify-content: center;
     margin-right: 5%;
   }
-  .custom_div{
+  .custom_div {
     width: 100% !important;
     margin: 50px auto !important;
   }
-  .para_div{
+  .para_div {
     width: 100% !important;
     overflow: auto;
   }
@@ -117,7 +117,7 @@
     margin-right: 4%;
   }
 }
- 
+
 .dialog {
   position: absolute;
   top: -45px;
@@ -129,10 +129,13 @@
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.175) !important;
 }
-.custom_navbar{
-  z-index: 9999999;
+.custom_navbar {
+  z-index: 99999 !important;
 }
-.navbar-toggler{
+#exampleModal {
+  z-index: 999999 !important;
+}
+.navbar-toggler {
   box-shadow: none !important;
 }
 
@@ -174,16 +177,15 @@
 .link {
   padding: 5px 10px;
   cursor: pointer;
-} 
+}
 
-
-.custom_div{
+.custom_div {
   max-width: 60%;
   max-height: 60vh;
   margin: 50px auto;
   background-color: none;
-  text-overflow:unset;
+  text-overflow: unset;
 }
-.custom_div .para{
+.custom_div .para {
   text-align: left;
 }

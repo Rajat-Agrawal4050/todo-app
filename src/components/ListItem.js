@@ -34,8 +34,8 @@ export default function ListItem(props) {
           <div className="btn_div">
             <button
               type="button"
-              data-title={props.title}
-              data-desc={props.desc}
+              data-title={props.etitle}
+              data-desc={props.edesc}
               style={{ marginLeft: "25px !important" }}
               data-id={props.id}
               onClick={(ev) => props.editfunc(props.id, ev)}

@@ -56,7 +56,7 @@ export default function Home() {
     let id = event.target.getAttribute("data-id");
 
     newtoast((t) => (
-      <div className="dialog">
+     <div className="dialog">
         <div className="dialog-msg">
           <p> Do You Really want to delete this Todo? </p>
         </div>
@@ -76,6 +76,7 @@ export default function Home() {
             </button>
           </div>
         </footer>
+   
       </div>
     ));
   }
@@ -200,6 +201,8 @@ export default function Home() {
                     ? ele.description.slice(0, 30) + "..."
                     : ele.description
                 }
+                etitle={ele.title}
+                edesc={ele.description}
                 id={ele.id}
                 markasread={ele.markAsRead}
                 markread={markRead}

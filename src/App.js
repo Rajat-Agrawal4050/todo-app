@@ -18,7 +18,7 @@ function App() {
   
         <Route exact path="/todo-app/" element={<Home />} />
         <Route exact  path="/todo-app/details/:itemId" element={<Details />} />
-        <Route exact  path="/todo-app/about" element={<About />} />
+        <Route exact  path="/todo-app/about/" element={<About />} />
       </Routes>
       </NoteContext.Provider>
     </>

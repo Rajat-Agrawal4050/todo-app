@@ -97,7 +97,7 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-    margin-right: 8%;
+    margin-right: 5%;
   }
   .custom_div{
     width: 100% !important;
@@ -109,19 +109,31 @@
   }
 }
 
+@media (max-width: 400px) {
+  .add_btn {
+    width: 35%;
+  }
+  .right_div {
+    margin-right: 4%;
+  }
+}
+ 
 .dialog {
   position: absolute;
-  top: 0;
-  left: 0;
-  /* border: 1px solid #d32f2f; */
+  top: -45px;
   width: 400px;
-  /* padding: 12px; */
   margin: 100px auto 0;
   background-color: #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.175) !important;
+}
+.custom_navbar{
+  z-index: 9999999;
+}
+.navbar-toggler{
+  box-shadow: none !important;
 }
 
 .dialog .dialog-msg {
@@ -133,12 +145,10 @@
   color: #333;
 }
 .dialog footer {
-  /* border: 1px solid #d32f2f; */
   border-top: 1px solid #e5e5e5;
   padding: 8px 10px;
 }
 .dialog footer .controls {
-  /* border: 1px solid black; */
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -164,7 +174,9 @@
 .link {
   padding: 5px 10px;
   cursor: pointer;
-}
+} 
+
+
 .custom_div{
   max-width: 60%;
   max-height: 60vh;

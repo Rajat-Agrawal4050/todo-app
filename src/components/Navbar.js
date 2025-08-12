@@ -1,3 +1,4 @@
+import "../App.css";
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -5,7 +6,7 @@ export default function Navbar() {
   return (
     <>
 
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar custom_navbar navbar-expand-lg navbar-dark bg-dark">
   <div className="container-fluid">
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
@@ -18,7 +19,7 @@ export default function Navbar() {
         </li>
 
         <li className="nav-item">
-          <Link className="nav-link" aria-current="page" to="/todo-app/about">About</Link>
+          <Link className="nav-link" aria-current="page" to="/todo-app/about/">About</Link>
         </li>
     
       </ul>

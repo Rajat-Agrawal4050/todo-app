@@ -56,6 +56,7 @@ export default function Home() {
     let id = event.target.getAttribute("data-id");
 
     newtoast((t) => (
+    
      <div className="dialog">
         <div className="dialog-msg">
           <p> Do You Really want to delete this Todo? </p>
@@ -78,6 +79,7 @@ export default function Home() {
         </footer>
    
       </div>
+
     ));
   }
 

@@ -118,22 +118,20 @@
   }
 }
 
+#_rht_toaster > div > div {
+  background-color: transparent !important;
+}
 .dialog {
   position: absolute;
   top: -45px;
+  content: "";
   width: 400px;
-  margin: 100px auto 0;
+  margin: 100px auto;
   background-color: #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
-  overflow: hidden;
+  overflow: hidden !important;
   border: 1px solid rgba(0, 0, 0, 0.175) !important;
-}
-.custom_navbar {
-  z-index: 99999 !important;
-}
-#exampleModal {
-  z-index: 999999 !important;
 }
 .navbar-toggler {
   box-shadow: none !important;

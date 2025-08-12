@@ -13,7 +13,7 @@ root.render(
      <BrowserRouter>
     <App />
     </BrowserRouter>
-    <Toaster position="top-center" reverseOrder={false} />
+    <Toaster position="top-center" reverseOrder={false}  />
     <ToastContainer
       position="top-right"
       autoClose={4000}
